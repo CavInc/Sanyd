@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_main"
+            android:title="Постановка целей"/>
+        <item
+            android:id="@+id/drawer_today"
+            android:title="План сегодня"/>
+        <item
+            android:id="@+id/drawer_tomorrow"
+            android:title="План завтра"/>
+        <item
+            android:id="@+id/drawer_statistic"
+            android:title="Статистика"/>
+        <item
+            android:id="@+id/drawer_about"
+            android:title="О программе"/>
+
+    </group>
+</menu>

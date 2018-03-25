@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sanyd</string>
+    <!-- app string -->
+    <string name="about_label">О программе</string>
+    <string name="statistiv_label">Статистика</string>
+    <string name="plantoday_label">Сегодня</string>
+    <string name="plantomorrow_label">На завтра</string>
+    <string name="text_about">О программе многострочник</string>
+    <string name="coordinate_reclam">Данные для заказа рекламмы</string>
+</resources>
