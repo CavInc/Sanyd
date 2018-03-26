@@ -32,6 +32,7 @@ public class MainTargetAdapter extends ArrayAdapter<TargetModel> {
             holder = new ViewHolder();
             holder.mTitle = (EditText) row.findViewById(R.id.item_title);
             holder.mQuantity = (EditText) row.findViewById(R.id.item_quantity);
+            holder.mComment = (EditText) row.findViewById(R.id.item_comment);
             row.setTag(holder);
         }else{
             holder = (ViewHolder) row.getTag();
@@ -40,7 +41,7 @@ public class MainTargetAdapter extends ArrayAdapter<TargetModel> {
         TargetModel record = getItem(position);
         holder.mTitle.setText(record.getTargetTitle());
         holder.mQuantity.setText(String.valueOf(record.getQuantity()));
-
+        holder.mComment.setText(record.getComment());
 
         return row;
     }
@@ -48,6 +49,7 @@ public class MainTargetAdapter extends ArrayAdapter<TargetModel> {
     private class ViewHolder {
         public EditText mTitle;
         public EditText mQuantity;
+        public EditText mComment;
 
 
     }
