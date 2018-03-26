@@ -11,13 +11,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 import cav.sanyd.R;
+import cav.sanyd.data.models.TargetModel;
+import cav.sanyd.ui.adapter.MainTargetAdapter;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar mToolbar;
     private DrawerLayout mNavigationDrawer;
+    private MainTargetAdapter mAdapter;
+    private ListView mListView;
 
     private FloatingActionButton mFab;
 
@@ -30,6 +38,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mNavigationDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         mFab = (FloatingActionButton) findViewById(R.id.main_tr_fab);
+
+        mListView = (ListView) findViewById(R.id.main_lv);
+
+        ArrayList<TargetModel> models = new ArrayList<>();
+        models.add(new TargetModel(0,"Text","TecT",new Date(),new Date(),0,0,0,0));
+
+        mAdapter = new MainTargetAdapter(this,R.layout.main_item,models);
+
+        mListView.setAdapter(mAdapter);
 
 
         setupDrower();
